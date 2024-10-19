@@ -1,0 +1,1 @@
+//generating nth factorial no
