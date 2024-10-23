@@ -2,7 +2,7 @@
 package AD1.assignment.asgn_4;
 public class q3 {
     public static void main(String[] args) {
-        int arr [] ={6,4,8,9,3,1};
+        int arr [] ={13,46,24,52,20,9};
         System.out.println("------Original Array------");
         printArray(arr);
         selectionSort(arr);
@@ -11,7 +11,17 @@ public class q3 {
     }
 
     static void selectionSort(int[] arr){
-      
+      for (int i = 0;i <= arr.length-2;i++){
+        int mini =i;
+        for(int j=i;j<=arr.length-1;j++){
+            if(arr[j]<arr[mini]){
+               mini = j;
+            }
+        }
+        int temp = arr[mini];
+        arr[mini] = arr[i];
+        arr[i]=temp;
+      }
     }
 
     static void printArray(int[] arr){
